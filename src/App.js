@@ -1,8 +1,9 @@
-// import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import React, { useState, useEffect } from 'react';
-import SearchBar from './components/SearchBar'
-import MovieList from './components/MovieList'
+import SearchBar from './components/SearchBar';
+import MovieList from './components/MovieList';
+import logo from '../src/assets/images/logo.png'
+import header from '../src/assets/images/header.png'
 
 function App() {
 
@@ -31,8 +32,11 @@ function App() {
     }
 
   return (
-    <>
-    <h1>The Shoppies</h1>
+    <div className='App'>
+      <section>
+      <img className='logo' src={logo} alt="Logo"></img>
+      <img className='header' src={header} alt="Header"></img>
+      </section>
       <SearchBar
         setQuery={setQuery} 
         loadMovies={loadMovies}
@@ -40,7 +44,7 @@ function App() {
       <MovieList 
         movies={movies} 
         query={query} />
-    </>
+    </div>
   );
 }
 

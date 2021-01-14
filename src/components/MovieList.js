@@ -7,7 +7,7 @@ function MovieList(props) {
     const query = props.query
 
     const renderQueryResponse = () => {
-        return query === "" ? <h5>Please enter your search.</h5> :
+        return query === "" ? null :
         (movies === undefined ? <h5>No results...or too many results.</h5> : <h5>Results for {query}...</h5>)
     }
 

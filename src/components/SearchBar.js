@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import nextPage from './images/next-page.png';
+import previousPage from './images/previous-page.png'
 
 function SearchBar(props) {
 
@@ -10,23 +12,17 @@ function SearchBar(props) {
         props.handlePagination(type)
     }
 
-    // const handleClick = type => {
-    //     type === 'increment' ? props.setPageNumber(prevPageNumber => prevPageNumber + 1) : 
-    //     props.setPageNumber(prevPageNumber => prevPageNumber - 1)
-    // }
-
     const renderSearchBar = () => {
         return(
-        <input onChange={(e) => handleChange(e.target.value)}></input>
+        <input placeholder='Search for a movie...' className='search-bar' onChange={(e) => handleChange(e.target.value)}></input>
         );
     }
 
     return (
         <>
         {renderSearchBar()}
-        <br></br>
-        <button onClick={() => handlePagination('decrement')}>Previous Page</button>
-        <button onClick={() => handlePagination('increment')}>Next Page</button>
+        <img onClick={() => handlePagination('decrement')} className='previous-page' src={previousPage} alt="previous-page"></img>
+        <img onClick={() => handlePagination('increment')} className='next-page' src={nextPage} alt="next-page"></img>
         </>
     )
 }
