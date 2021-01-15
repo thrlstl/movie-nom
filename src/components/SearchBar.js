@@ -14,7 +14,7 @@ function SearchBar(props) {
 
     const renderSearchBar = () => {
         return(
-        <input placeholder='Search for a movie...' className='search-bar' onChange={(e) => handleChange(e.target.value)}></input>
+            <input placeholder='Search for a movie...' className='search-bar' onChange={(e) => handleChange(e.target.value)}></input>
         );
     }
 

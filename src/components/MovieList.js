@@ -8,7 +8,7 @@ function MovieList(props) {
 
     const renderQueryResponse = () => {
         return query === "" ? null :
-        (movies === undefined ? <h5>No results...or too many results.</h5> : <h5>Results for {query}...</h5>)
+        (movies === undefined ? <text className='query-response'>no results...or too many results.</text> : <text className='query-response'>results for {query}...</text>)
     }
 
     const renderMovies = () => {
@@ -18,10 +18,12 @@ function MovieList(props) {
 
     return(
         <section className='results'>
-        {renderQueryResponse()}
-        <div class='movies-container'>
-            {renderMovies()}
-        </div>
+            <div className='query-response-container'>
+                {renderQueryResponse()}
+            </div>
+                <div class='movies-container'>
+                    {renderMovies()}
+                </div>
         </section>
     )
 }

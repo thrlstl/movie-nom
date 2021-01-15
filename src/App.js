@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import SearchBar from './components/SearchBar';
 import MovieList from './components/MovieList';
 import Header from './components/Header'
-// import logo from '../src/assets/images/logo.png'
-// import header from '../src/assets/images/header.png'
+import Nominations from './components/Nominations'
 
 function App() {
 
@@ -42,6 +41,7 @@ function App() {
       <MovieList 
         movies={movies} 
         query={query} />
+      <Nominations />
     </div>
   );
 }
