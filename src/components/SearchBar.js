@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import nextPage from '../../src/assets/images/next-page.png';
 import previousPage from '../../src/assets/images/previous-page.png'
 

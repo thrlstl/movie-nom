@@ -13,7 +13,7 @@ function MovieList(props) {
 
     const renderMovies = () => {
         return query !== "" && movies !== undefined ? 
-        movies.map((movie, index) => { return <MovieItem key={index} movie={movie} /> }) : null
+        movies.map((movie, index) => { return <MovieItem handleNomination={() => props.handleNomination(movie)} key={index} movie={movie} /> }) : null
     }
 
     return(

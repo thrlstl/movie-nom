@@ -17,14 +17,16 @@
   min-height: 100vh;
 }
 
+.header-container {
+  width: 100%;
+}
+
 .logo {
   min-height: 15vmin;
   max-height: 15vmin;
-  /* height: 15vmin; */
   position: absolute;
   top: 20px;
   left: 20px;
-  pointer-events: none;
 }
 
 .nominations-button {
@@ -32,12 +34,35 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  pointer-events: none;
 }
 
 .nominations-button:hover {
-  transform: scale(1.02);
+  transform: scale(1.2);
   transition: all 0.2s ease-in-out;
+}
+
+.nominations-container {
+  padding-top: 50px;
+  height: 120vh;
+  width: 100vw;
+  top: 26%;
+  position: absolute;
+  z-index: 2;
+  background-color: #1e4b3f;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 80px 20px;
+  justify-items: center;
+}
+
+.nomination-item {
+  border: white;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: -2px 9px 11px 0px rgba(0, 0, 0, 0.48);
+  display: inline-block;
+  width: 200px;
+  height: 300px;
 }
 
 .header {
@@ -45,7 +70,6 @@
   min-height: 40px;
   top: 55px;
   position: relative;
-  pointer-events: none;
 }
 
 .search-bar {
@@ -83,7 +107,8 @@
 }
 
 .results {
-  height: max-content;
+  max-height: 100vh;
+  overflow-x: scroll;
   background-color: #1e4b3f;
   padding-top: 15px;
   padding-bottom: 80px;
@@ -96,6 +121,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 80px 20px;
+  justify-items: center;
 }
 
 .movie-item {
@@ -122,7 +148,6 @@
 }
 
 .movie-poster:hover {
-  /* opacity: 100%; */
   transition: all 0.3s ease-in-out;
 }
 
