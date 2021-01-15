@@ -30,6 +30,8 @@
 }
 
 .nominations-button {
+  animation-name: heartbeat;
+  animation-duration: 1.5s;
   height: 5vmin;
   position: absolute;
   top: 20px;
@@ -41,16 +43,41 @@
   transition: all 0.2s ease-in-out;
 }
 
-.nominations-container {
+.nominations-window {
+  animation-name: bounce-in-bottom;
+  animation-duration: 1.1s;
   padding-top: 50px;
-  height: 120vh;
-  width: 100vw;
+  padding-bottom: 50px;
+  min-height: 100vh;
+  max-height: max-content;
+  width: 100%;
   top: 26%;
   position: absolute;
   z-index: 2;
   background-color: #1e4b3f;
+}
+
+.nominations-icon {
+  animation-name: pulsate-bck;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  z-index: 2;
+  min-height: 10vmin;
+  max-height: 10vmin;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.nominations-icon:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.nominations-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 80px 20px;
   justify-items: center;
 }
@@ -61,8 +88,8 @@
   border-width: 2px;
   box-shadow: -2px 9px 11px 0px rgba(0, 0, 0, 0.48);
   display: inline-block;
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 500px;
 }
 
 .header {
@@ -107,7 +134,8 @@
 }
 
 .results {
-  max-height: 100vh;
+  height: max-content;
+  min-height: 100vh;
   overflow-x: scroll;
   background-color: #1e4b3f;
   padding-top: 15px;
@@ -125,6 +153,8 @@
 }
 
 .movie-item {
+  animation-name: fade-in;
+  animation-duration: 1.2s;
   border: white;
   border-style: solid;
   border-width: 2px;
@@ -157,17 +187,101 @@
   font-size: 12px;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bounce-in-bottom {
+  -webkit-animation: bounce-in-bottom 1.1s both;
+  animation: bounce-in-bottom 1.1s both;
+}
+
+@keyframes bounce-in-bottom {
+  0% {
+    transform: translateY(500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
   }
 }
 
-@keyframes App-logo-spin {
+.fade-in {
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pulsate-bck {
+  animation: pulsate-bck 0.5s ease-in-out infinite both;
+}
+
+@keyframes pulsate-bck {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out both;
+}
+
+@keyframes heartbeat {
   from {
-    transform: rotate(0deg);
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
   }
-} */
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}

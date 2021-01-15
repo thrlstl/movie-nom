@@ -1,16 +1,19 @@
 import React from 'react';
 import NominationItem from './NominationItem'
-// import logo from '../../src/assets/images/logo.png'
+import NominationsIcon from '../../src/assets/images/heart-box-shadow.png'
 
 function Nominations(props) {
 
     const renderNominations = () => {
-        return props.nominations.map((movie, index) => { return <NominationItem movie={movie} index={index} /> })
+        return props.nominations.map((movie, index) => { return <NominationItem handleRemove={() => props.handleRemove(movie)} movie={movie} index={index} /> })
     }
 
     return(
+        <div className='nominations-window'>
+        <img className='nominations-icon' src={NominationsIcon} alt="My Nominations"></img>
         <div className='nominations-container'>
             {renderNominations()}
+        </div>
         </div>
     )
 }

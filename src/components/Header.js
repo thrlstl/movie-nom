@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from '../../src/assets/images/logo.png'
 import header from '../../src/assets/images/header.png'
 import nominationsButton from '../../src/assets/images/heart.png'
 
 function Header(props) {
 
-    const nominationCount = props.nominationCount
+    const notifications = props.notifications
 
     return(
         <div className='header-container'>

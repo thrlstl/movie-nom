@@ -11,7 +11,7 @@ function App() {
   const [movies, loadMovies] = useState([])
   const [pageNumber, setPageNumber] = useState(1)
   const [nomToggle, setNomToggle] = useState(false)
-  const [nominations, addNomination] = useState([])
+  const [nominations, setNominations] = useState([])
 
   useEffect(() => {
     fetchData()
@@ -38,22 +38,37 @@ function App() {
     }
 
     const handleNomination = movie => {
-      addNomination(prevNominations => [...nominations, movie])
+      setNominations(prevNominations => [...nominations, movie])
+    }
+
+    const handleRemove = movie => {
+      setNominations(nominations.filter(nomination => nomination !== movie))
     }
 
   return (
     <div className='App'>
-        {nomToggle ? <Nominations nominations={nominations} /> : null}
+
       <Header
-        toggleNominations={toggleNominations}/>
+      toggleNominations={toggleNominations}
+      notifications={nominations.length}
+      />
+        
         <SearchBar
-          setQuery={setQuery} 
-          loadMovies={loadMovies}
-          handlePagination={handlePagination} />
-      <MovieList
+        setQuery={setQuery} 
+        loadMovies={loadMovies}
+        handlePagination={handlePagination} />
+
+      { nomToggle && nominations.length ? 
+      
+        <Nominations
+        handleRemove={handleRemove} 
+        nominations={nominations} /> :
+        
+        <MovieList
         handleNomination={handleNomination} 
         movies={movies} 
-        query={query} />
+        query={query} />  }
+
     </div>
   );
 }
