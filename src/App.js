@@ -2,8 +2,9 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import SearchBar from './components/SearchBar';
 import MovieList from './components/MovieList';
-import logo from '../src/assets/images/logo.png'
-import header from '../src/assets/images/header.png'
+import Header from './components/Header'
+// import logo from '../src/assets/images/logo.png'
+// import header from '../src/assets/images/header.png'
 
 function App() {
 
@@ -33,10 +34,7 @@ function App() {
 
   return (
     <div className='App'>
-      <section>
-      <img className='logo' src={logo} alt="Logo"></img>
-      <img className='header' src={header} alt="Header"></img>
-      </section>
+      <Header />
       <SearchBar
         setQuery={setQuery} 
         loadMovies={loadMovies}

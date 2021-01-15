@@ -17,12 +17,12 @@ function MovieList(props) {
     }
 
     return(
-        <>
+        <section className='results'>
         {renderQueryResponse()}
-        <ol>
+        <div class='movies-container'>
             {renderMovies()}
-        </ol>
-        </>
+        </div>
+        </section>
     )
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import nextPage from './images/next-page.png';
-import previousPage from './images/previous-page.png'
+import nextPage from '../../src/assets/images/next-page.png';
+import previousPage from '../../src/assets/images/previous-page.png'
 
 function SearchBar(props) {
 
