@@ -5,15 +5,20 @@ function MovieList(props) {
 
     const movies = props.movies
     const query = props.query
+    const querySuccessMessage = `results for ${query}...`
+    const queryFailMessage = 'no results...or too many results.'
 
     const renderQueryResponse = () => {
         return query === "" ? null :
-        (movies === undefined ? <text className='query-response'>no results...or too many results.</text> : <text className='query-response'>results for {query}...</text>)
+        ( movies === undefined ? <text className='query-response'>{queryFailMessage}</text> : 
+        <text className='query-response'>{querySuccessMessage}</text> )
     }
 
     const renderMovies = () => {
         return query !== "" && movies !== undefined ? 
-        movies.map((movie, index) => { return <MovieItem handleNomination={() => props.handleNomination(movie)} key={index} movie={movie} /> }) : null
+        movies.map( (movie, index) => { return <MovieItem 
+                                                handleNomination={() => props.handleNomination(movie)} 
+                                                key={index} movie={movie} /> }) : null
     }
 
     return(

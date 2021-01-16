@@ -5,12 +5,15 @@ import NominationsIcon from '../../src/assets/images/heart-box-shadow.png'
 function Nominations(props) {
 
     const renderNominations = () => {
-        return props.nominations.map((movie, index) => { return <NominationItem handleRemove={() => props.handleRemove(movie)} movie={movie} index={index} /> })
+        return props.nominations.map((movie, index) => { return <NominationItem 
+                                                                handleRemove={() => props.handleRemove(movie)} 
+                                                                movie={movie} 
+                                                                index={index} /> })
     }
 
     return(
         <div className='nominations-window'>
-        <img className='nominations-icon' src={NominationsIcon} alt="My Nominations"></img>
+        <img className='nominations-icon' src={NominationsIcon} alt="My Nominations" />
         <div className='nominations-container'>
             {renderNominations()}
         </div>

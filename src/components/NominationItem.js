@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import noPosterAvailable from '../../src/assets/images/no-poster-available.png'
 import removeImage from '../../src/assets/images/remove.png'
 
@@ -9,7 +9,7 @@ function NominationItem(props) {
     const poster = props.movie.Poster
 
     const renderPoster = () => {
-        return props.movie.Poster === 'N/A' ? noPosterAvailable : poster
+        return poster === 'N/A' ? noPosterAvailable : poster
     }
 
     const renderRemove = (image) => {
@@ -17,12 +17,14 @@ function NominationItem(props) {
     }
 
     const reRenderPoster = (image) => {
-        return props.movie.Poster === 'N/A' ? image.src = noPosterAvailable : image.src = poster
+        return poster === 'N/A' ? image.src = noPosterAvailable : image.src = poster
     }
 
     return(
         <>
-            <div onClick={() => props.handleRemove()} className='nomination-item'>
+            <div 
+            onClick={() => props.handleRemove()} 
+            className='nomination-item'>
                 <img 
                 className='movie-poster' 
                 src={renderPoster()}

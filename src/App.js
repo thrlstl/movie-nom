@@ -50,7 +50,7 @@ function App() {
 
       <Header
       toggleNominations={toggleNominations}
-      notifications={nominations.length}
+      nominations={nominations}
       />
         
         <SearchBar

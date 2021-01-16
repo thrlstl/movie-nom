@@ -30,10 +30,8 @@
 }
 
 .nominations-button {
-  animation-name: heartbeat;
-  animation-duration: 1.5s;
   height: 5vmin;
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
 }
@@ -41,6 +39,10 @@
 .nominations-button:hover {
   transform: scale(1.2);
   transition: all 0.2s ease-in-out;
+}
+
+.nominations-button[notification="1"] {
+  animation: jello-horizontal 0.9s 1;
 }
 
 .nominations-window {
@@ -90,6 +92,10 @@
   display: inline-block;
   width: 300px;
   height: 500px;
+}
+
+.nomination-item[clicked="1"] {
+  animation: fade-out-bck 0.9s;
 }
 
 .header {
@@ -186,8 +192,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+.movie-item[clicked="1"] {
+  animation: pulsate-bck 0.3s 1;
+}
+
 .movie-poster {
-  /* opacity: 75%; */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -198,16 +207,30 @@
   transition: all 0.3s ease-in-out;
 }
 
+@keyframes pulsate-bck {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .movie-info {
   color: white;
   font-family: "HelveticaNeueHv";
   font-size: 12px;
 }
 
-.bounce-in-bottom {
-  -webkit-animation: bounce-in-bottom 1.1s both;
-  animation: bounce-in-bottom 1.1s both;
-}
+/* ----------------------------------------------
+ * Keyframed generated using Animista on 2021-1-15 21:42:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
 
 @keyframes bounce-in-bottom {
   0% {
@@ -246,10 +269,6 @@
   }
 }
 
-.fade-in {
-  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -257,10 +276,6 @@
   100% {
     opacity: 1;
   }
-}
-
-.pulsate-bck {
-  animation: pulsate-bck 0.5s ease-in-out infinite both;
 }
 
 @keyframes pulsate-bck {
@@ -273,10 +288,6 @@
   100% {
     transform: scale(1);
   }
-}
-
-.heartbeat {
-  animation: heartbeat 1.5s ease-in-out both;
 }
 
 @keyframes heartbeat {
@@ -300,5 +311,40 @@
   45% {
     transform: scale(1);
     animation-timing-function: ease-out;
+  }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes fade-out-bck {
+  0% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-80px);
+    opacity: 0;
   }
 }
