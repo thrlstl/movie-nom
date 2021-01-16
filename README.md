@@ -1,6 +1,6 @@
 # SHOPPIES
 
-<iframe src="https://giphy.com/embed/PjOdvn3ARp2k6MDSwg" width="282" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/PjOdvn3ARp2k6MDSwg">via GIPHY</a></p>
+![Jan-15-2021 22-46-21](https://user-images.githubusercontent.com/68616411/104797540-577c5e00-5784-11eb-9c65-4159618db263.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
