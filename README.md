@@ -1,4 +1,4 @@
-# SHOPPIES
+# The Shoppies
 
 by Matthew Steele
 
