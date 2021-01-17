@@ -215,18 +215,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-@keyframes pulsate-bck {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .movie-info {
   color: white;
   font-family: "HelveticaNeueHv";
@@ -239,6 +227,18 @@
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
+
+@keyframes pulsate-bck {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 @keyframes bounce-in-bottom {
   0% {

@@ -7,15 +7,15 @@ import nominationsButton from '../../src/assets/images/heart.png'
 function Header(props) {
 
     const [notification, setNotification] = useState(0)
-    const [header, setHeader] = useState(0)
+    const [header, setHeader] = useState(mainHeader)
     const [headerAnimation, setHeaderAnimation] = useState(0)
 
     useEffect(() => {
-        return props.nominations.length > 0 ? setNotification(1) : null
+        return props.nominations.length > 0 ? setNotification(1) : props.toggleNominations()
     }, [props.nominations])
 
     useEffect(() => {
-        return props.nominations.length > 0 && props.header ? 
+        return props.header ? 
         (setHeader(nominationsHeader), setHeaderAnimation(1)) : (setHeader(mainHeader), setHeaderAnimation(0))
     }, [props.header])
 

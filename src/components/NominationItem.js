@@ -12,11 +12,11 @@ function NominationItem(props) {
         return poster === 'N/A' ? noPosterAvailable : poster
     }
 
-    const renderRemove = (image) => {
+    const renderRemove = image => {
         image.src = removeImage
     }
 
-    const reRenderPoster = (image) => {
+    const reRenderPoster = image => {
         return poster === 'N/A' ? image.src = noPosterAvailable : image.src = poster
     }
 

@@ -38,12 +38,12 @@ function App() {
     }
 
     const toggleNominations = () => {
-      setNomToggle(!nomToggle)
+      return nominations.length === 0 ? setNomToggle(false) : setNomToggle(!nomToggle)
     }
 
     const handleNomination = movie => {
       return nominations.length < 5 ?
-      setNominations(prevNominations => [...nominations, movie]) : null
+      setNominations(prevNominations => [movie, ...nominations]) : null
     }
 
     const handleRemove = movie => {

@@ -24,11 +24,11 @@ function MovieItem(props) {
         return poster === 'N/A' ? noPosterAvailable : poster
     }
 
-    const renderNominate = (image) => {
+    const renderNominate = image => {
         return nominated === 0 && nominationsCount < 5 ? image.src = nominationImage : null
     }
 
-    const reRenderPoster = (image) => {
+    const reRenderPoster = image => {
         return poster === 'N/A' ? image.src = noPosterAvailable : image.src = poster
     }
 
