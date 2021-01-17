@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import noPosterAvailable from '../../src/assets/images/no-poster-available.png'
 import removeImage from '../../src/assets/images/remove.png'
 

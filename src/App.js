@@ -17,6 +17,10 @@ function App() {
     fetchData()
   }, [query, pageNumber])
 
+  useEffect(() => {
+    return nominations.length === 5 ? toggleNominations() : null
+  }, [nominations])
+
   const fetchData = () => {
     const apiKey = 'ca733f6a'
     const type = 'movie'
@@ -38,7 +42,8 @@ function App() {
     }
 
     const handleNomination = movie => {
-      setNominations(prevNominations => [...nominations, movie])
+      return nominations.length < 5 ?
+      setNominations(prevNominations => [...nominations, movie]) : null
     }
 
     const handleRemove = movie => {
@@ -51,6 +56,7 @@ function App() {
       <Header
       toggleNominations={toggleNominations}
       nominations={nominations}
+      header={nomToggle}
       />
         
         <SearchBar
@@ -65,6 +71,7 @@ function App() {
         nominations={nominations} /> :
         
         <MovieList
+        nominations={nominations}
         handleNomination={handleNomination} 
         movies={movies} 
         query={query} />  }

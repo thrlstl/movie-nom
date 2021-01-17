@@ -8,7 +8,7 @@ function Nominations(props) {
         return props.nominations.map((movie, index) => { return <NominationItem 
                                                                 handleRemove={() => props.handleRemove(movie)} 
                                                                 movie={movie} 
-                                                                index={index} /> })
+                                                                key={index} /> })
     }
 
     return(
