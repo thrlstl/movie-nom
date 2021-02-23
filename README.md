@@ -6,7 +6,7 @@ If you have any questions about this application, please email at matthewsteele.
 
 ## Live Site
 
-https://shoppies-online.netlify.app/
+https://movie-nom.netlify.app/
 
 ![Feb-22-2021 20-28-54](https://user-images.githubusercontent.com/68616411/108795736-a6b86a00-754c-11eb-8d80-12203e29d792.gif)
 
