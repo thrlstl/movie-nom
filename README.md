@@ -1,20 +1,24 @@
 # Movie Nominations App
 
-_by Matthew Steele_ [I'm an inline-style link with title](https://www.linkedin.com/in/matthewsteeleonline/ "LinkedIn")
+_Created by Matthew Steele_ — [LinkedIn](https://www.linkedin.com/in/matthewsteeleonline/ "LinkedIn")
+
+If you have any questions about this application, please email at matthewsteele.chi@gmail.com!
 
 ## Live Site
 
 https://shoppies-online.netlify.app/
 
-![Jan-17-2021 16-28-27](https://user-images.githubusercontent.com/68616411/104857915-409f4e00-58e1-11eb-9f57-f00375290567.gif)
+![Feb-22-2021 20-28-54](https://user-images.githubusercontent.com/68616411/108795736-a6b86a00-754c-11eb-8d80-12203e29d792.gif)
 
 ## How It Works
 
 - Search - Use the search bar to find a movie by title.
+- Pagination - Click on the arrow icons to paginate through search results.
 - Nominate - Hover over and click on a movie poster.
 - View Nominations - Click on upper-right icon.
 - Remove Nomination - Click on a movie in nomination window.
-- Maximum Nominations - nominate up to 5 movies.
+- Maximum Nominations - Movies can only be nominated once, maximum 5 movies nominated.
+- Animation - Heart icon animates each time you nominate a movie.
 
 ## Technology Used
 
