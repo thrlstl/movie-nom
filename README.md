@@ -1,8 +1,8 @@
-# Movie Nom
+# Movie Nominations App
 
-_by Matthew Steele_
+_by Matthew Steele_ [I'm an inline-style link with title](https://www.linkedin.com/in/matthewsteeleonline/ "LinkedIn")
 
-## View Site
+## Live Site
 
 https://shoppies-online.netlify.app/
 
