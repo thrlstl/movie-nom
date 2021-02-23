@@ -23,9 +23,9 @@ https://movie-nom.netlify.app/
 ## Technology Used
 
 - React / Javascript
-- OMDb API - The Open Movie Database (Movie Search)
+- [OMDb API](http://omdbapi.com/ "OMDb API") - The Open Movie Database (Movie Search)
 - React Hooks
 - HTML / CSS
-- Animations - Animista.net
+- Animations - [Animista](https://animista.net/ "Animista.net")
 - Design - Adobe Photoshop
 - Deployment - Netlify
