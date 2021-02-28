@@ -9,7 +9,7 @@
 
 ![Feb-22-2021 20-28-54](https://user-images.githubusercontent.com/68616411/108795736-a6b86a00-754c-11eb-8d80-12203e29d792.gif)
 
-## Features
+## 𝙁𝙚𝙖𝙩𝙪𝙧𝙚𝙨
 
 - Search - Use the search bar to find a movie by title.
 - Pagination - Click on the arrow icons to paginate through search results.
@@ -19,7 +19,7 @@
 - Maximum Nominations - Movies can only be nominated once, maximum 5 movies nominated.
 - Animation - Heart icon animates each time you nominate a movie.
 
-## Technology Used
+## 𝙏𝙚𝙘𝙝𝙣𝙤𝙡𝙤𝙜𝙮
 
 - React / Javascript
 - [OMDb API](http://omdbapi.com/ "OMDb API") - The Open Movie Database (Movie Search)
